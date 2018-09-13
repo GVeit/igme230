@@ -1,4 +1,4 @@
-/* Set a wrapper */
+/* Set a wrapper for the entire website */
 #wrapper
 {
     width: 1366px;
@@ -10,7 +10,7 @@
 }
 
 
-/*  set a wrapper for the bio area*/
+/*  set a wrapper for the bio area only*/
 #portrait_wrapper
 {
     margin-bottom: 100px;
@@ -25,7 +25,7 @@
     
 }
 
-#execrises_wrapper
+#exercises_wrapper
 {
     margin-bottom: 100px;
     text-align: center;
@@ -153,8 +153,6 @@ img
 
 }
 
-
-/*---------------Button Table-------------------*/
 
 /*----------------- home button --------------*/
 
