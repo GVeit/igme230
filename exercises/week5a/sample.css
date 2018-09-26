@@ -62,7 +62,7 @@ aside
         padding: auto;
         padding-top: 8px;
         padding-bottom: 8px;
-        margin-top: 7px;
+        margin-top: 8px;
         display: block;
     
     }
@@ -72,6 +72,7 @@ aside
         float: left;
         width: 20%;
         text-align: center;
+        background-color: white;
     }
 
     article
