@@ -73,9 +73,12 @@ footer {
 
 @media screen and (max-width: 760px) {
 
-    grid-template-areas: "header header header"  /* 1st row: header spans three columns  */
-    "sidenav article sidebar"  /* 2nd row: one element in each of 3 columns  */
-    "footer footer footer"; /* 3rd row: footer spans three columns */
-    grid-template-rows: 1fr 10fr 1fr;   /* defines relative height of three rows */
-    grid-template-columns: 20% auto 20%;   /* defines width of the three columns */
+
+    #wrapper {
+        grid-template-areas: "header header header"  /* 1st row: header spans three columns  */
+        "sidenav article sidebar"  /* 2nd row: one element in each of 3 columns  */
+        "footer footer footer"; /* 3rd row: footer spans three columns */
+        grid-template-rows: 1fr 10fr 1fr;   /* defines relative height of three rows */
+        grid-template-columns: 20% auto 20%;   /* defines width of the three columns */
+    }
 }
