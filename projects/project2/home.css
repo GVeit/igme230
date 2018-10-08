@@ -4,16 +4,77 @@
     margin-left:  auto; /* 1 */
   
     max-width: 960px; /* 2 */
+    height: 700px;
     
   
     padding-right: 10px; /* 3 */
     padding-left:  10px; /* 3 */
 
-    border-style: solid;
-    border-color: red;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
 
-    background-color: #5cdb95;
   }
+
+  /* from https://codepen.io/P1N2O/pen/pyBNzX */
+
+  @-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+/* normal background  */
+#wrapper1
+{
+    margin-right: auto; /* 1 */
+    margin-left:  auto; /* 1 */
+  
+    max-width: 960px; /* 2 */
+    height: 700px;
+    
+    
+    padding-right: 10px; /* 3 */
+    padding-left:  10px; /* 3 */
+
+    background-color: rgb(47, 20, 85);
+    height: auto; 
+    min-height: 700px;
+}
+
 
 
 /* -------------------- NAV ------------------------*/
@@ -29,6 +90,7 @@ ul {
     margin-left:  auto; /* 1 */
   
     max-width: 960px; /* 2 */
+    
 }
 
 li {
@@ -40,34 +102,87 @@ li a {
     font-family: Muli;
     font-weight: 800;
     display: block;
-    color: #05386b;
+    color: #747474;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 li a:hover:not(.active) {
-    color: #05386b;
+    color: #ff7053;
 }
 
 .active {
     font-family: Muli;
     font-weight: 800;
-    color: #5cdb95;
+    color: #ff7053;
 }
 
 
 /* -------------------- Front page --------------------- */
-img {  
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 
-}
 
 h1 {
     font-family: Muli;
-    color: #05386b;
+    color: #ffffff;
     text-align: center;
     font-size: 56px;
 }
+
+#wrapperbio1 {
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px; 
+    max-width: 350px;
+    color: white;
+    font-family: montserrat;
+    font-size: 20px;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-family: montserrat;
+    font-size: 24px;
+    font-weight: 700;
+}
+/* -------------------- Gallery Page --------------------- */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: .5rem;
+
+    max-width: 95vw;
+    margin: .5rem auto;
+}
+
+/*
+img {
+    display: block;
+    width: 100%;
+
+    border-radius: .5rem;
+    border: 2px solid rgb(255, 255, 255);
+
+}
+*/
+img:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+
+@supports (display: grid) {
+    .warning {
+        display: none;
+    }
+}
+        
+/* -------------------- Bio Page --------------------- */
+
