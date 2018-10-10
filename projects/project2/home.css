@@ -3,15 +3,15 @@
     margin-right: auto; /* 1 */
     margin-left:  auto; /* 1 */
   
-    max-width: 960px; /* 2 */
-    height: 700px;
+    max-width: 1366px; /* 2 */
+    height: 768px;
     
   
     padding-right: 10px; /* 3 */
     padding-left:  10px; /* 3 */
 
 	color: #fff;
-	background: linear-gradient(-45deg, #EE7752, #E73C7E, rgb(4, 127, 184), #23D5AB);
+	background: linear-gradient(-45deg, rgb(255, 224, 85), #EE7752, #EF626C, rgb(238, 68, 119));
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
@@ -63,16 +63,16 @@
     margin-right: auto; /* 1 */
     margin-left:  auto; /* 1 */
   
-    max-width: 960px; /* 2 */
-    height: 700px;
+    max-width: 1366px; /* 2 */
+    height: 768px;
     
     
     padding-right: 10px; /* 3 */
     padding-left:  10px; /* 3 */
 
-    background-color: rgb(47, 20, 85);
+    background-color: #f6e8ea;
     height: auto; 
-    min-height: 700px;
+    min-height: 768px;
 }
 
 
@@ -89,7 +89,7 @@ ul {
     margin-right: auto; /* 1 */
     margin-left:  auto; /* 1 */
   
-    max-width: 960px; /* 2 */
+    max-width: 1366px; /* 2 */
     
 }
 
@@ -129,27 +129,25 @@ h1 {
     font-size: 56px;
 }
 
-#wrapperbio1 {
-    margin-left: auto;
-    margin-right: auto;
-    height: 50px; 
-    max-width: 350px;
-    color: white;
-    font-family: montserrat;
-    font-size: 20px;
-}
+
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-p {
+.frontbio {
     text-align: center;
     color: white;
     font-family: montserrat;
     font-size: 24px;
     font-weight: 700;
+}
+
+/* -------------------- P  --------------------- */
+
+p {
+
 }
 /* -------------------- Gallery Page --------------------- */
 
@@ -172,17 +170,51 @@ img {
 
 }
 */
+/*/*
 img:hover {
     -ms-transform: scale(1.5); /* IE 9 */
+    /*
     -webkit-transform: scale(1.5); /* Safari 3-8 */
+    /*
     transform: scale(1.5); 
 }
 
+/*
 @supports (display: grid) {
     .warning {
         display: none;
     }
 }
+*/
         
 /* -------------------- Bio Page --------------------- */
 
+#wrapperbio1 {
+    color: #312f2f;
+    font-family: montserrat;
+    font-size: 18px;
+    
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: justify;
+
+    margin-top: 100px;
+    margin-right: 100px;
+    padding: 10px;
+    border: solid red;
+    float: right;
+}
+
+.portrait {
+    float: left;
+    margin-top: 60px;
+    margin-left: 100px;
+}
+
+.box {
+    display: block;  
+    background: lightblue;
+    margin-bottom: 1em;
+  }
+  
