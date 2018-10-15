@@ -156,7 +156,7 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: .5rem;
 
-    max-width: 95vw;
+    width: 100%;
     margin: .5rem auto;
 }
 
@@ -171,13 +171,7 @@ img {
 
 }
 
-#gallery img:hover {
-    -ms-transform: scale(1.5); /* IE 9 */
-    
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
-    
-    transform: scale(1.5); 
-}
+
 
 
 @supports (display: grid) {
@@ -186,7 +180,48 @@ img {
     }
 }
 
-        
+/* lightbox from https://codepen.io/gschier/pen/HCoqh?editors=1100 */
+/* width of between two pictures */
+.thumbnail {
+    max-width: 100%;
+  }
+  
+  
+  .italic { font-style: italic; }
+  .small { font-size: 0.8em; }
+  
+  /** LIGHTBOX MARKUP **/
+  
+  .lightbox {
+      /** Default lightbox to hidden */
+      display: none;
+  
+      /** Position and style */
+      position: fixed;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.8);
+  }
+  
+  .lightbox img {
+      /** Pad the lightbox image */
+      max-width: 75%;
+      max-height: 65%;
+      margin-top: 2%;
+  }
+  
+  .lightbox:target {
+      /** Remove default browser outline */
+      outline: none;
+  
+      /** Unhide lightbox **/
+      display: block;
+  }
+
 /* -------------------- Bio Page --------------------- */
 
 #wrapperbio1 {
@@ -197,8 +232,6 @@ img {
     max-width: 700px;
     width: auto;
     margin: 0 auto;
-    width: 100%;
-    text-align: justify;
 
     margin-top: 100px;
     margin-right: 100px;
