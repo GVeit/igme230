@@ -24,7 +24,7 @@
         <h2>My Favorite Foods</h2>
     
         <ol id="foodsList">
-    
+        
         </ol>
     
       </main>
@@ -34,20 +34,35 @@
         let colors = ["Orange", "Red", "Blue"]; // add some colors
         let foods = ["Taco", "Burrito", "Nacho"]; // add some foods
 
-        //console.log(colors);
+        createColorList(colors, colors);
+        createFoodList(colors, colors);
 
-
-        createList(colors, colors);
-        createList(foods, foods);
-
-        function createList(listElement,array)
+        function createColorList(listElement,array)
         {
             var arraylength = array.length;
 
             for (var i = 0; i < arraylength; i++) 
-            {
-                console.log(listElement[i])
-            }
+                {
+                    var node = document.createElement("li");     
+                    var textnode = document.createTextNode(colors[i]); 
+
+                    node.appendChild(textnode);                              // Append the text to <li>
+                    document.getElementById("colorsList").appendChild(node);     // Append <li> to <ul> with id="myList" 
+                }
+        }
+
+        function createFoodList(listElement,array)
+        {
+            var arraylength = array.length;
+
+            for (var i = 0; i < arraylength; i++) 
+                {
+                    var node = document.createElement("li");     
+                    var textnode = document.createTextNode(foods[i]); 
+
+                    node.appendChild(textnode);                              // Append the text to <li>
+                    document.getElementById("foodsList").appendChild(node);     // Append <li> to <ul> with id="myList" 
+                }
         }
 
     </script>

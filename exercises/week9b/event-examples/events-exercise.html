@@ -34,28 +34,43 @@
 <div id="colorform">
 	<legend>Choose your favorite color!</legend>
 
-	<p><input type="radio" name="colorGroup" onclick="myFunction(this.value)" value="red"> Red</p>
-	<p><input type="radio" name="colorGroup" onclick="myFunction(this.value)" value="green"> Green</p>
-	<p><input type="radio" name="colorGroup" onclick="myFunction(this.value)" value="blue"> Blue</p>
+	<p><input type="radio" name="colorGroup" onclick="pickColor(this.value)" value="red"> Red</p>
+	<p><input type="radio" name="colorGroup" onclick="pickColor(this.value)" value="green"> Green</p>
+	<p><input type="radio" name="colorGroup" onclick="pickColor(this.value)" value="blue"> Blue</p>
 
 	<input type="hidden" id="result">
 
-	<p><button id="colorButton" type="button">Submit</button></p>
+	
+	<p><button id="colorButton" type="button" onclick="showInput()">Submit</button></p>
+	
+
+
 	<p id="info"></p>
+	<p><span id='display'></span></p>
 
 </div>
 
 <script>
 
-	function myFunction(colorGroup) 
+	var x;
+
+	function pickColor(colorGroup) 
 	{
-    	var x = document.getElementById("result").value = colorGroup;
+		//local needs to be global
+    	x  = document.getElementById("result").value = colorGroup;
 
 		
     	document.getElementById("info").innerHTML = x;
-	}
-	
 
+		
+
+
+	}
+
+    function showInput() {
+		document.getElementById("info").innerHTML = "You picked " + x + ".";
+    }
+	
 </script>
 </body>
 </html>
