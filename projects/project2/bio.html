@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="home.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Muli:900" rel="stylesheet"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript"></script> 
@@ -23,52 +25,99 @@
     </head>
 
     <body>
-    
-        <div id="navBar">
-        <ul>
-            <li><a href="portfolio.html">HOME</a></li>
-            <li><a class="active" href="bio.html">ABOUT</a></li>
-            <li><a href="gallery.html">GALLERY</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-            <li><a class="download" href="portfolio.html">RESUME</a></li>
-        </ul> 
-        </div>
+
+        <div class="topnav">
+            <a href="portfolio.html">HOME</a>
+            <a href="bio.html">ABOUT</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="contact.html">CONTACT</a>
+          </div>
 
     <div id="wrapper1">
-
-        <div class="portrait">
-                <img src="media/GabrielVeit.jpg" alt="GabrielVeit" width="300"/>
-        </div>
-
-            <div id="wrapperbio1">
-            <p>
-                I'm currently a second year student at Rochester Institute of Technology, 
-                majoring in New Media Interactive Development under Interactive Media and
-                Game department within the Thomas Golisano College of Computing and
-                Information Sciences. I was born in Washington, D.C. and spent the
-                second half of my life in Austin. I have always been drawn to
-                technology, architecture, engineering and visual designs, and how we
-                experience them though touch and eyes. I am always trying to find a
-                balance between artistic and function with all of my projects.
-            </p>
-            </div>
-
-            <div id="list">
-                <ul>
-                    <li>Exceptional Work Ethics</li>
-                    <li>Detail-Orientated</li>
-                    <li>Quick Learner</li>
-                    <li>Creativity and Design</li>
-                    <li>C++ Language</li>
-                    <li>C# Language</li>
-                    <li>HTML and CSS</li>
-                    <li>Javascript</li>
-                    <li>Proficient with Adobe software</li>
-
-                </ul>
-            </div>
+    
+    <div class="grid-container">
             
+                <div class="item2">
 
+                    <img src="media/portrait.png" alt="GabrielVeit" width="300"/>
+
+                        <div id="list">
+                                <h2>SKILL</h2>
+                                    <ul>
+                                    <li>Exceptional Work Ethics</li>
+                                    <li>Detail-Orientated</li>
+                                    <li>Quick Learner</li>
+                                    <li>Creativity and Design</li>
+                                    <li>C++ Language</li>
+                                    <li>C# Language</li>
+                                    <li>HTML and CSS</li>
+                                    <li>Proficient with Adobe software</li>
+                                </ul>
+                        </div>
+
+                    <div class"social">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+
+        <div id="content">
+
+            <div class="item1">
+                    <div id="wrapperbio1">
+                        <p>
+                                I'm currently a second year student at Rochester Institute of Technology, 
+                                majoring in New Media Interactive Development under Interactive Media and
+                                Game department within the Thomas Golisano College of Computing and
+                                Information Sciences. I was born in Washington, D.C. and spent the
+                                second half of my life in Austin. I have always been drawn to
+                                technology, architecture, engineering and visual designs, and how we
+                                experience them though touch and eyes. I am always trying to find a
+                                balance between artistic and function with all of my projects.
+                        </p>
+                        <p>
+                                You always can reach me out through my email address which is <b>gabriel.veit99@gmail.com</b>
+                        </p>
+                    </div>
+            </div>  
+
+            <div class="item3">
+                <div id="experiences">
+                                
+                    <h2>EXPERIENCES</h2>
+                                            <div id="itintern">
+                                                <p><b>Information Technology Intern at Texas School for the Deaf</b></p>
+                                                <ul>
+                                                    <li>Maintained, upgraded and troubleshoot software and hardware issues</li>
+                                                    <li>Developed PowerPoint Slideshows to be used for the Graduation Ceremony</li>
+                                                </ul>
+                                            </div>
+                                
+                                            <div id="GDTM">
+                                                <p><b>Graphic Designer for Tiger Media Organization | August 2017 – May 2018</b></p>
+                                                <ul>
+                                                    <li>Designed and created flyers for student organizations</li>
+                                                    <li>Designed logos for other club organization upon on requests</li>
+                                                    <li>Participated fundraiser events for the organization</li>
+                                                </ul>
+                                            </div>
+                                
+                                            <div id="RP">
+                                                <p><b>Graphic Designer for Ranger Press | August 2015 – June 2017</b></p>
+                                                <ul>
+                                                    <li>Operated different types of machines, including commercial Xerox 700 Series, digital Roland banner printer, high quality photograph printer, and booklet maker machine</li>
+                                                    <li>Designed newsletter layouts for associations, logos for clients and businesses, banners for special events based on customers’ criteria and requests</li>
+                                                </ul>
+                                            </div>
+                                
+                </div>
+
+            </div>
+        </div>
+            
+                    
+        </div>
     </div>
 
     </body>
