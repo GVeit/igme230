@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widith-device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gabriel Veit</title>
+
+    <script type="text/javascript"></script> 
+        <style>
+            html, body { margin:0; padding:0; }
+
+            #container {
+                background-color:green;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #mygrid {
+                display:grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            #mygrid div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(127, 215, 241);
+                border: #464646 2px dotted;
+                width: 90%;
+                height: 80vh;
+                max-width: 100px;
+
+            }
+            .headerbar {
+                grid-column: 1/4;
+            }
+    
+        </style>
+    </head>
+    <body>
+        <div id"container">
+        <div id="mygrid">
+            <div class="headerbar">Cell 1</div>
+            <div>Cell 2</div>
+            <div>Cell 3</div>
+            <div>Cell 4</div>
+            <div>Cell 5</div>
+            <div>Cell 6</div>
+            <div>Cell 7</div>
+            <div>Cell 8</div>
+            <div>Cell 9</div>
+        </div>
+        </div>
+
+    </body>
+
+</html>

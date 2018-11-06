@@ -54,7 +54,9 @@ html, body {margin:0;padding:0;height:100%;}
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+    
+    max-width: 1346px;
 
   }
 
@@ -110,9 +112,15 @@ html, body {margin:0;padding:0;height:100%;}
     padding-right: 10px; 
     padding-left:  10px;
 
-    background-color: #f8ffff;
+    background-color: #ffffff;
     height: auto; 
     min-height: 768px;
+    max-width: 1366px;
+}
+
+#holder {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -166,6 +174,9 @@ html, body {margin:0;padding:0;height:100%;}
 .topnav {
     overflow: hidden;
     background-color: rgb(34, 34, 34);
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Style the topnav links */
@@ -254,7 +265,8 @@ figcaption {
     }
 }
 
-/* lightbox from https://codepen.io/gschier/pen/HCoqh?editors=1100 */
+/* The grid system came from the class lesson, but I added the lightbox concept
+which heavily modifed from https://codepen.io/gschier/pen/HCoqh?editors=1100 */
 /* width of between two pictures */
 .thumbnail {
     max-width: 100%;
@@ -298,19 +310,22 @@ figcaption {
       display: block;
   }
 
+
+  
+
 /* -------------------- Bio Page --------------------- */
 
 
-/* grid system from https://www.w3schools.com/css/css_grid.asp */
+/*The idea of grid system came from https://www.w3schools.com/css/css_grid.asp and the class lesson */
 .item1 { grid-area: main; }
-.item2 { grid-area: portrait; background-color: rgb(161, 236, 255)}
+.item2 { grid-area: portrait; background-color: rgb(74, 195, 228);border-radius: 25px;}
 .item3 { grid-area: experience; }
 
 .grid-container {
   display: grid;
   grid-template-areas:
   'portrait portrait main main main'
-  'portrait portrait experience experience experience'; /*what exactly is this doing?*/
+  'portrait portrait experience experience experience'; 
   padding: 10px;
 }
 .grid-container > div {
@@ -324,10 +339,6 @@ figcaption {
     padding: 10px
 }
 
-.portrait {
-    margin: auto;
-}
-
 /* experience bio */
 #experiences {
     color: #312f2f;
@@ -339,8 +350,12 @@ h2 {
     text-align: center;
     font-weight: 400;
     font-size: 56px;
+}
+
+#experienceText {
     color: rgb(74, 195, 228);
 }
+
 #itintern {
     margin-top: 5px;
     font-family: montserrat;
@@ -363,17 +378,19 @@ h2 {
   /* ----- list of skills ------ */
 #list {
     font-size: 20px;
-    padding: 10px
+    padding: 10px;
+    color: rgb(255, 255, 255) !important;
 }
 
   
-/* social media buttons from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons */
+/* The concept of social media buttons came from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons */
 .fa {
-    padding: 25px;
+    padding: 20px;
     font-size: 30px;
     text-align: center;
     text-decoration: none;
-    width: 100%;
+
+    box-sizing: content-box !important;
   }
   
   .fa:hover {
@@ -383,19 +400,46 @@ h2 {
   .fa-facebook {
     background: #3B5998;
     color: white;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
   }
   
   .fa-linkedin {
     background: #007bb5;
     color: white;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
   }
   
   
   .fa-instagram {
-    background: #125688;
+    background: #e1306c;
     color: white;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+  }
+  .fa-github {
+    background: #6e5494;
+    color: white;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
   }
 
   .social {
-    display: inline-block;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
