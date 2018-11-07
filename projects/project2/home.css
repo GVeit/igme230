@@ -7,6 +7,10 @@
       width: 100%;
     }
 
+    #wrapper{
+        height: 100% !important;
+    }
+
     .grid-container {
         display: grid;
         grid-template-areas:
@@ -50,7 +54,7 @@ html, body {margin:0;padding:0;height:100%;}
     padding-left:  10px; 
 
 	color: #fff;
-    background: linear-gradient(-45deg, rgb(74, 195, 228), rgb(107, 218, 207),#3aeca8);
+    background: linear-gradient(-45deg, #600185, #3bbfc3, #82f7bc);
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
@@ -112,7 +116,7 @@ html, body {margin:0;padding:0;height:100%;}
     padding-right: 10px; 
     padding-left:  10px;
 
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     height: auto; 
     min-height: 768px;
     max-width: 1366px;
@@ -173,7 +177,7 @@ html, body {margin:0;padding:0;height:100%;}
 /* Style the top navigation bar */
 .topnav {
     overflow: hidden;
-    background-color: rgb(34, 34, 34);
+    background-color: #292b2f;
     max-width: 1366px;
     margin-left: auto;
     margin-right: auto;
@@ -194,7 +198,7 @@ html, body {margin:0;padding:0;height:100%;}
 /* Change color on hover */
 .topnav a:hover {
     background-color: rgb(82, 82, 82);
-    color: rgb(74, 195, 228);
+    color: #3bbfc3;
 }
 
 /* -------------------- Front page --------------------- */
@@ -318,7 +322,7 @@ which heavily modifed from https://codepen.io/gschier/pen/HCoqh?editors=1100 */
 
 /*The idea of grid system came from https://www.w3schools.com/css/css_grid.asp and the class lesson */
 .item1 { grid-area: main; }
-.item2 { grid-area: portrait; background-color: rgb(74, 195, 228);border-radius: 25px;}
+.item2 { grid-area: portrait; background-color: #3bbfc3;border-radius: 25px;}
 .item3 { grid-area: experience; }
 
 .grid-container {
@@ -334,7 +338,7 @@ which heavily modifed from https://codepen.io/gschier/pen/HCoqh?editors=1100 */
 
 /* for the brief summary*/
 #wrapperbio1 {
-    color: #312f2f;
+    color: #292b2f;
     font-size: 18px;
     padding: 10px
 }
@@ -353,7 +357,7 @@ h2 {
 }
 
 #experienceText {
-    color: rgb(74, 195, 228);
+    color: #3bbfc3;
 }
 
 #itintern {
