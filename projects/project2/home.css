@@ -7,10 +7,12 @@
       width: 100%;
     }
 
+    /* change index page's wrapper to 100% in height */
     #wrapper{
         height: 100% !important;
     }
 
+    /* change the grid system layout */
     .grid-container {
         display: grid;
         grid-template-areas:
@@ -38,8 +40,10 @@
 
 }
 
+/* to stablize the wbesite size for the grid system */
 
 html, body {margin:0;padding:0;height:100%;}
+
 /* ------------------- wrapper -------------------*/
 #wrapper {
     margin-right: auto; 
@@ -64,7 +68,7 @@ html, body {margin:0;padding:0;height:100%;}
 
   }
 
-  /* from https://codepen.io/P1N2O/pen/pyBNzX */
+  /* the design comes from https://codepen.io/P1N2O/pen/pyBNzX */
 
   @-webkit-keyframes Gradient {
 	0% {
@@ -102,7 +106,7 @@ html, body {margin:0;padding:0;height:100%;}
 	}
 }
 
-/* normal background  */
+/* background for the bio page  */
 #wrapper1
 {
     margin-right: auto; 
@@ -122,6 +126,27 @@ html, body {margin:0;padding:0;height:100%;}
     max-width: 1366px;
 }
 
+/* background for the gallery page  */
+#wrapper2
+{
+    margin-right: auto; 
+    margin-left:  auto; 
+  
+     
+    width: auto;
+    height: auto;
+    
+    
+    padding-right: 10px; 
+    padding-left:  10px;
+
+    background-color: #f0f0f0;
+    height: auto; 
+    min-height: 768px;
+    max-width: 1346px;
+}
+
+/* to hold everything in index page */
 #holder {
     margin-left: auto;
     margin-right: auto;
@@ -131,48 +156,6 @@ html, body {margin:0;padding:0;height:100%;}
 
 /* -------------------- NAV ------------------------*/
 
-/*
-#navBar ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgb(34, 34, 34);
-
-
-    margin-right: auto; 
-    margin-left:  auto; 
-    
-    width: 100%; 
-    
-}
-
-#navBar li {
-    float: left;
-}
-
-
-#navBar li a {
-    font-family: Muli;
-    font-weight: 800;
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-#navBar li a:hover:not(.active) {
-    color: rgb(74, 195, 228);
-}
-
-#navBar .active {
-    font-family: Muli;
-    font-weight: 800;
-    color: rgb(74, 195, 228);
-}
-
-*/
 /* from https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_navbar */
 /* Style the top navigation bar */
 .topnav {
@@ -201,9 +184,18 @@ html, body {margin:0;padding:0;height:100%;}
     color: #3bbfc3;
 }
 
+/* ----------------- footer with the logo ---------------- */
+#footerwrapper {
+    overflow: hidden;
+    background-color: #292b2f;
+    max-width: 1386px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
 /* -------------------- Front page --------------------- */
 
-
+/* h1 style for the front page */
 h1 {
     font-family: Muli;
     color: #ffffff;
@@ -211,13 +203,13 @@ h1 {
     font-size: 56px;
 }
 
-
+/* for the logo picture */
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
+/* the three words to describe myself */
 .frontbio {
     text-align: center;
     color: white;
@@ -231,6 +223,7 @@ img {
 
 /* -------------------- Gallery Page --------------------- */
 
+/* create a grid */
 #gallery main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -241,7 +234,7 @@ img {
 }
 
 
-
+/* pictures for the gird */
 #gallery img {
     display: block;
     /*width: 100%;*/
@@ -251,6 +244,7 @@ img {
 
 }
 
+/* bottom text of a indivdual picture */
 figcaption {
     color: #ffffff;
     font-size: 14px;
@@ -261,8 +255,6 @@ figcaption {
     font-family: montserrat;
 }
 
-
-
 @supports (display: grid) {
     #gallery .warning {
         display: none;
@@ -271,6 +263,7 @@ figcaption {
 
 /* The grid system came from the class lesson, but I added the lightbox concept
 which heavily modifed from https://codepen.io/gschier/pen/HCoqh?editors=1100 */
+
 /* width of between two pictures */
 .thumbnail {
     max-width: 100%;
@@ -321,6 +314,7 @@ which heavily modifed from https://codepen.io/gschier/pen/HCoqh?editors=1100 */
 
 
 /*The idea of grid system came from https://www.w3schools.com/css/css_grid.asp and the class lesson */
+
 .item1 { grid-area: main; }
 .item2 { grid-area: portrait; background-color: #3bbfc3;border-radius: 25px;}
 .item3 { grid-area: experience; }
@@ -349,6 +343,8 @@ which heavily modifed from https://codepen.io/gschier/pen/HCoqh?editors=1100 */
     font-size: 18px;
     padding: 10px
 }
+
+/* h2 */
 h2 {
     font-family: Muli !important;
     text-align: center;
@@ -360,6 +356,7 @@ h2 {
     color: #3bbfc3;
 }
 
+/* for each internship */
 #itintern {
     margin-top: 5px;
     font-family: montserrat;
@@ -377,7 +374,6 @@ h2 {
     font-family: montserrat;
     text-align: left;
     padding: 5px;
-
 }
   /* ----- list of skills ------ */
 #list {
@@ -393,7 +389,6 @@ h2 {
     font-size: 30px;
     text-align: center;
     text-decoration: none;
-
     box-sizing: content-box !important;
   }
   
