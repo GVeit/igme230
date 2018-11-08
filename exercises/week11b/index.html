@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widith-device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gabriel Veit</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:900" rel="stylesheet"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"></script>
+        <style>
+                body 
+                {
+                    font-family: 'Muli', sans-serif;
+                    font-family: 'Montserrat', sans-serif;
+                }
+
+                #navpanel {
+                    background-color: gray;
+                    width: 200px;
+                    height: 200px;
+                }
+                
+        </style>
+
+    </head>
+
+    <body>
+        <button id="show">Show</button ><button id="hide">Hide</button>
+        <div id="navpanel">
+            <ul>
+                <li>Link 1</li>
+                <li>Link 2</li>
+                <li>Link 3</li>
+            </ul>
+        </div>
+    <script>
+
+        $("#hide").click(function(){
+            $("#navpanel").slideDown("slow");
+        });
+
+        $("#show").click(function(){
+           $("#navpanel").slideUp("fast");
+        });
+    
+    </script>
+
+    </body>
+
+</html>
