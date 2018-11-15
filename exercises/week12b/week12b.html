@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #wrapper {
+            max-width: 1000px;
+        }
+        nav {
+            display: flex;
+            flex-direction: column; /* main axis vertical; places menu below togglebar */
+        }
+
+        #togglebar {
+            height: 25px;
+            width: auto;
+            border: 1px solid;
+            text-align: center;
+            background-color: white; 
+            z-index: 3;
+        }
+
+        #menu {
+            height: 100%;
+            width: 100%;
+            max-width: 1000px;
+            position: absolute;
+            top: 14px;
+            background-color:lightcyan;
+            z-index: 2;
+            max-height: 650px;
+        }
+
+        main {
+            z-index: 1;
+        }
+
+        #navpanel {
+            display: grid;
+            grid-template-columns: 100px 1.5rem;
+            min-height: 200px;
+            max-height: 300px;
+            border: 1px solid black;
+            margin-bottom: 2em;
+            background-color: white;
+            position: fixed;
+            left: -100px;
+            z-index: 2;
+            width: 150px
+        }
+
+        #navtoggle {
+            grid-column-start: 2;
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        #navmenu {
+            grid-column-start: 1;
+            grid-row-start: 1;
+            align-items: top;
+        }
+
+        #close {
+            display: none;
+        }
+
+        #open {
+            font-size: 2.5rem;
+        }
+
+        .submenu-panel {
+            display: none; 
+        }
+
+        #content {
+            padding: 0 .5em 0 2em;
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrapper" >
+
+        <nav>
+                <div id="togglebar">
+                        ▼ ▲
+                </div>
+                    <div id="menu">
+                    
+                    <p>
+
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus purus ipsum, pellentesque eu dictum sit amet, suscipit eget eros. Nam sed lacus ac ipsum luctus gravida. Nunc sed massa quis arcu tincidunt aliquet a in augue. Praesent ut eleifend magna. Sed vitae lorem lacus. Aliquam sapien quam, fermentum in turpis quis, gravida consequat sapien. Ut tellus odio, mattis et mollis quis, laoreet sit amet ex.
+                            
+                            Morbi odio risus, ultricies eget ante sed, cursus fringilla ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dapibus sem nec risus efficitur fermentum. Fusce eu euismod mi. Nunc vitae placerat magna. Praesent porttitor fringilla purus non condimentum. Suspendisse turpis magna, semper luctus elementum eget, mattis mattis nibh. Morbi at mollis ligula, sit amet elementum risus.
+                            
+                            Morbi ullamcorper elit dictum est luctus, ac elementum nunc molestie. Proin egestas aliquam lectus, non tincidunt neque aliquet vel. Pellentesque erat purus, faucibus non ligula a, maximus vestibulum nulla. Sed ut dignissim nisi, varius fermentum purus. Morbi sem dolor, ultrices porttitor sodales ut, feugiat non risus. Ut at dolor at diam interdum commodo. Nam porttitor erat hendrerit vulputate finibus. Phasellus volutpat nisl vel aliquet blandit. Quisque eros tortor, interdum sit amet porta gravida, convallis ac ante.
+                            
+                            Aenean at varius eros. Aenean gravida dignissim urna. Nulla facilisi. In ornare, risus varius pharetra egestas, turpis dolor porttitor nibh, id finibus nunc quam convallis leo. Vivamus lacinia lacus in mollis accumsan. Proin lacus nisi, mollis sed rhoncus scelerisque, tempor nec felis. Integer eget ante bibendum, dignissim nulla nec, suscipit nisi. Vivamus porta, nibh ut interdum cursus, diam sem sodales tortor, in condimentum diam sem vel purus. Proin eu augue aliquet, maximus risus sit amet, bibendum dui. Morbi luctus odio nec nulla tempus, eu tempus metus varius.
+                            
+                            Sed ut elit a ipsum convallis interdum vitae vel arcu. Duis congue nec ipsum ac finibus. Etiam id arcu id nunc aliquam facilisis. Morbi lorem justo, efficitur pellentesque commodo eget, ullamcorper ac urna. Proin in metus eget lorem suscipit vulputate ut aliquet purus. Curabitur malesuada turpis sit amet ante pharetra, at elementum ipsum ullamcorper. Fusce aliquet tempus metus eu ullamcorper. Maecenas consequat sed dolor nec ultrices. Maecenas magna nisl, finibus non arcu non, convallis fringilla sem. Quisque tempor malesuada dui vel commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum iaculis mauris. Fusce at pellentesque libero. Suspendisse potenti. </p>
+                </div>
+            </nav>
+
+    <main><p>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus purus ipsum, pellentesque eu dictum sit amet, suscipit eget eros. Nam sed lacus ac ipsum luctus gravida. Nunc sed massa quis arcu tincidunt aliquet a in augue. Praesent ut eleifend magna. Sed vitae lorem lacus. Aliquam sapien quam, fermentum in turpis quis, gravida consequat sapien. Ut tellus odio, mattis et mollis quis, laoreet sit amet ex.
+            
+            Morbi odio risus, ultricies eget ante sed, cursus fringilla ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dapibus sem nec risus efficitur fermentum. Fusce eu euismod mi. Nunc vitae placerat magna. Praesent porttitor fringilla purus non condimentum. Suspendisse turpis magna, semper luctus elementum eget, mattis mattis nibh. Morbi at mollis ligula, sit amet elementum risus.
+            
+            Morbi ullamcorper elit dictum est luctus, ac elementum nunc molestie. Proin egestas aliquam lectus, non tincidunt neque aliquet vel. Pellentesque erat purus, faucibus non ligula a, maximus vestibulum nulla. Sed ut dignissim nisi, varius fermentum purus. Morbi sem dolor, ultrices porttitor sodales ut, feugiat non risus. Ut at dolor at diam interdum commodo. Nam porttitor erat hendrerit vulputate finibus. Phasellus volutpat nisl vel aliquet blandit. Quisque eros tortor, interdum sit amet porta gravida, convallis ac ante.
+            
+            Aenean at varius eros. Aenean gravida dignissim urna. Nulla facilisi. In ornare, risus varius pharetra egestas, turpis dolor porttitor nibh, id finibus nunc quam convallis leo. Vivamus lacinia lacus in mollis accumsan. Proin lacus nisi, mollis sed rhoncus scelerisque, tempor nec felis. Integer eget ante bibendum, dignissim nulla nec, suscipit nisi. Vivamus porta, nibh ut interdum cursus, diam sem sodales tortor, in condimentum diam sem vel purus. Proin eu augue aliquet, maximus risus sit amet, bibendum dui. Morbi luctus odio nec nulla tempus, eu tempus metus varius.
+            
+            Sed ut elit a ipsum convallis interdum vitae vel arcu. Duis congue nec ipsum ac finibus. Etiam id arcu id nunc aliquam facilisis. Morbi lorem justo, efficitur pellentesque commodo eget, ullamcorper ac urna. Proin in metus eget lorem suscipit vulputate ut aliquet purus. Curabitur malesuada turpis sit amet ante pharetra, at elementum ipsum ullamcorper. Fusce aliquet tempus metus eu ullamcorper. Maecenas consequat sed dolor nec ultrices. Maecenas magna nisl, finibus non arcu non, convallis fringilla sem. Quisque tempor malesuada dui vel commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum iaculis mauris. Fusce at pellentesque libero. Suspendisse potenti. </p>
+    </main>
+
+    <div id="navpanel">
+            <div id="navtoggle"><span id="open">►</span><span id="close">◄</span></div>
+            <div id="navmenu">
+                <p>Nav Menu</p>
+                <ul>
+                    <li><span class="submenu">Example Links</span>
+                        <ul class="submenu-panel">
+                            <li><a href="jquery-slide-panel.html">Slide Down</a></li>
+                            <li><a href="jquery-slide-side.html">Slide Side</a></li>
+                        </ul>
+                    </li>
+                    <li>Single Item</li>
+                    <li><span class="submenu">Submenu 2</span>
+                        <ul class="submenu-panel">
+                            <li>Sub-Item 2.1</li>
+                            <li>Sub-Item 2.2</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</div>
+    <script>
+
+        $("#togglebar").click(function () {
+            $("#menu").slideToggle("down");
+      
+        });
+
+        $("#close").click(function () {
+            $("#navpanel").animate({ left: '-100' }, "slow");
+            $("#close").toggle();
+            $("#open").toggle();
+        });
+
+        $("#open").click(function () {
+            $("#navpanel").animate({ left: '0px' }, "slow");
+            $("#close").toggle();
+            $("#open").toggle();
+        });
+
+        $(".submenu").click(function() {
+            $(this).next(".submenu-panel").toggle();
+        });
+
+
+    </script>
+
+</body>
+
+</html>
