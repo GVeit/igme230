@@ -24,47 +24,51 @@
 </head>
 
 <body>
-
+        <div id="wrapper"> 
         <section class="navigation">
                 <div class="nav-container">
                   <nav>
                     <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
                     <ul class="nav-list">
                       <li>
-                        <a href="portfolio/index.html">Home</a>
+                        <a href="portfolio/index.html">HOME</a>
                       </li>
                       <li>
-                        <a href="bio.html">About</a>
+                        <a href="bio.html">ABOUT</a>
                       </li>
                       <li>
-                        <a href="#!">Portfolio</a>
+                        <a href="#!">PORTFOLIO</a>
                         <ul class="nav-dropdown">
                           <li>
-                            <a href="webGallery.html">Web Design</a>
+                            <a href="webGallery.html">WEB DESIGN</a>
                           </li>
                           <li>
-                            <a href="codeGallery.html">Codes</a>
+                            <a href="codeGallery.html">CODES</a>
                           </li>
                           <li>
-                            <a href="gallery.html">Graphic Design</a>
+                            <a href="gallery.html">GRAPHIC DESIGN</a>
                           </li>
                         </ul>
                       </li>
                       <li>
-                        <a href="contact/form.html">Contact</a>
+                        <a href="contact/form.html">CONTACT</a>
                       </li>
                     </ul>
                   </nav>
                 </div>
               </section>
 
+    
+    <div class="grid-container">
+    
+    <div class="item1">
     <form method="post" action="formmail.php" name="ContactForm">
         <input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER" />
         <input type="hidden" name="recipients" value="gkv8601@rit.edu" />
         <input type="hidden" name="required" value="EmailAddr:Your email address,FullName:Your name" />
         <input type="hidden" name="subject" value="Test Mail from Contact Form" />
 
-        <h1>Your Name's Contact Form</h1>
+        <h1>CONTACT FORM</h1>
 
         <fieldset>
             <legend>Your Contact Information</legend>
@@ -75,7 +79,7 @@
             </div>
 
             <div class="inputs">
-                <label for="useremail">Your RIT Email:</label>
+                <label for="useremail">Your Email:</label>
                 <input type="email" name="EmailAddr" pattern=".+rit.edu" size="30">
             </div>
 
@@ -83,17 +87,32 @@
 
         <div id="commentsection">
             <label for="comments">Comments:</label>
-        <textarea name="mesg">Put your comments here...</textarea>
+        <textarea name="mesg"></textarea>
         </div>
 
+        <div class="responseSize">
         <label for="response">Would You Like a Response?</label>
-        <input type="radio" name="response" value="yes">Yes, please!
-        <input type="radio" name="response" value="no">Nope!
+        </div>
 
+        <div class="radioButton">
+            <input type="radio" name="response" value="yes">Yes
+            <input type="radio" name="response" value="no">No
+        </div>
         <button type="submit">Send It</button>
 
     </form>
+    </div>
 
+    </div>       
+
+
+
+    </div>
+
+    <div id="footerwrapper">
+            <img src="gkvlogo.png" alt="GabrielVeit" width="45"/>
+    </div>
+    
     <script  src="index.js"></script>
 
 </body>
