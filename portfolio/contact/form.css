@@ -3,18 +3,18 @@
 }
 
 /* -------------- responive designs ---------------*/
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 755px) {
     
     
     form {
-        width: auto !important;
+        width: 95% !important;
         padding: 20px !important;
         justify-content: center !important;
     }
 
     textarea {
        
-        width: 350px !important;
+        width: 90% !important;
         padding: 20px !important;
         margin: 10px auto !important;
         justify-content: center !important;
@@ -23,16 +23,26 @@
 
     .grid-container {
         display: grid;
-        grid-template-columns: 10px auto 10px;
+        grid-template-columns: 1em auto 1em;
         grid-template-rows: 4em auto 4em;
         grid-template-areas:
-        '...'
-        '.form.'
-        '...';
+        '.'
+        'form'
+        '.';
       }
 
     fieldset {
         width: auto !important;
+    }
+
+    legend {
+      font-size: 16px !important;
+    }
+
+    /* texts */
+    label {
+      font-size: 16px !important;
+      text-align: center;
     }
       
       
@@ -117,7 +127,7 @@ fieldset legend {
 
 .inputs input {
     margin: .5rem .25rem;
-    width: 300px;
+    width: 90%;
     border: 1px solid white;
 }
 
