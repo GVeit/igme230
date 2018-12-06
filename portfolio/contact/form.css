@@ -44,30 +44,279 @@
       font-size: 16px !important;
       text-align: center;
     }
+
+    .radioButton {
+      width: 35% !important;
+  }
       
       
 
 }
-/* background for the page  */
-#wrapper
-{
-    margin-right: auto; 
-    margin-left:  auto; 
+
+
+/* Navigation */
+
+/* modified from https://codepen.io/taniarascia/pen/dYvvYv */
+/* I edited the size, color, and some functions */
+
+/* Outer navigation wrapper */
+
+.navigation {
+  height: 70px;
+  background-color: #292b2f;
+  max-width: 1386px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Container with no padding for navbar */
+.nav-container {
+  max-width: 1386px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the topnav links */
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #292b2f;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Muli;
+  font-weight: 800;
+  margin:0px;
+}
+
+/* Change color on hover */
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: rgb(82, 82, 82);
+  color: #3bbfc3;
+}
+
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+
+nav ul li ul li {
+  min-width: 190px;
+}
+
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #262626;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 755px) {
+  .nav-mobile {
+    background-color: #292b2f;
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 0px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+    box-shadow: none;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: 755px) {
+  /* the list icon */
+  .nav-list {
+    display: block !important;
+  }
+}
+
+/* animated the list icon */
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span:before {
+  top: -10px;
+}
+
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle.active span {
+  background-color: transparent;
+}
+
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+
   
-     
-    width: auto;
-    height: auto;
+/* ------------------- wrapper -------------------*/
+#wrapper {
+  margin-right: auto; 
+  margin-left:  auto; 
+
+  max-width: 100%; 
+  height: 100%;
+  
+  height: auto; 
+  min-height: 768px;
+  max-width: 1366px;
 
 
-    background-color: #f0f0f0;
-    height: auto; 
-    min-height: 768px;
-    max-width: 1366px;
+  padding-right: 10px; 
+  padding-left:  10px; 
 
-    color: white;
-    
+color: #fff;
+  background: linear-gradient(45deg, #e90c43, #2ea0e2, #82f7bc);
+background-size: 400% 400%;
+-webkit-animation: Gradient 15s ease infinite;
+-moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  
+  max-width: 1386px;
+
+  overflow: auto;
+
 }
 
+/* the design comes from https://codepen.io/P1N2O/pen/pyBNzX */
+
+@-webkit-keyframes Gradient {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
+}
+
+@-moz-keyframes Gradient {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
+}
+
+@keyframes Gradient {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
+}
+
+/* background for the form page  */
+#wrapper1
+{
+  margin-right: auto; 
+  margin-left:  auto; 
+
+   
+  width: auto;
+  height: auto;
+
+  background-color: #f0f0f0;
+  height: auto; 
+  min-height: 768px;
+  max-width: 1366px;
+}
+
+/* grid */
 .item1 { grid-area: form; }
 
 .grid-container {
@@ -99,6 +348,7 @@ form {
     border: 1px solid white;
     border-radius: 1rem;
     padding: 1em;
+    color: white;
 }
 
 h1 {
@@ -153,15 +403,6 @@ ul li {
     display: inline; 
 }
 
-/* button style */
-
-button {
-    display: block;
-    margin: 1rem auto;
-    border-radius: 10px;
-    width: 150px;
-    height: 50px;
-}
 
 .responseSize {
     font-size: 25px;
@@ -171,9 +412,8 @@ button {
 .radioButton {
     justify-content: center;
     font-size: 25px;
-    border: solid 1px black;
     margin: 10px auto;
-    width: 30%;
+    width: 150px;
 }
 
 img {
@@ -192,180 +432,58 @@ img {
     margin-right: auto;
     
 }
+/*button style */
 
-/* Navigation */
+button{
+  background:#ee6f49;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:20px;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  width: 150px;
+  font-family: Muli !important;
 
-/* modified from https://codepen.io/taniarascia/pen/dYvvYv */
-/* I changed the size, color, and some functions */
+  display: block;
+  margin: 1rem auto;
+  border-radius: 10px;
+  text-decoration: none;
+}
+button:hover{
+  background:#fff;
+  color:#ee6f49;
+}
 
-/* Outer navigation wrapper */
+/* another button for class */
+.button{
+  background:#ee6f49;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:20px;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  width: 150px;
+  font-family: Muli !important;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 10px;
+  text-decoration: none;
+  padding-top: 19px;
+}
 
-.navigation {
-    height: 70px;
-    background-color: #292b2f;
-    max-width: 1366px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* Container with no padding for navbar */
-  .nav-container {
-    max-width: 1366px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  nav {
-    float: right;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    float: left;
-    position: relative;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Style the topnav links */
-  nav ul li a,
-  nav ul li a:visited {
-    display: block;
-    padding: 0 20px;
-    line-height: 70px;
-    background: #292b2f;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    font-family: Muli;
-    font-weight: 800;
-    margin:0px;
-  }
-  
-  /* Change color on hover */
-  nav ul li a:hover,
-  nav ul li a:visited:hover {
-    background: rgb(82, 82, 82);
-    color: #3bbfc3;
-  }
-  
-  nav ul li a:not(:only-child):after,
-  nav ul li a:visited:not(:only-child):after {
-    padding-left: 4px;
-    content: ' ▾';
-  }
-  
-  nav ul li ul li {
-    min-width: 190px;
-  }
-  
-  nav ul li ul li a {
-    padding: 15px;
-    line-height: 20px;
-  
-  }
-  
-  .nav-dropdown {
-    position: absolute;
-    display: none;
-    z-index: 1;
-  }
-  
-  /* Mobile navigation */
-  .nav-mobile {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #262626;
-    height: 70px;
-    width: 70px;
-  }
-  
-  @media only screen and (max-width: 755px) {
-    .nav-mobile {
-      background-color: #292b2f;
-      display: block;
-    }
-  
-    nav {
-      width: 100%;
-      padding: 70px 0 0px;
-    }
-    nav ul {
-      display: none;
-    }
-    nav ul li {
-      float: none;
-    }
-    nav ul li a {
-      padding: 15px;
-      line-height: 20px;
-      box-shadow: none;
-    }
-    nav ul li ul li a {
-      padding-left: 30px;
-    }
-  
-    .nav-dropdown {
-      position: static;
-    }
-  }
-  @media screen and (min-width: 755px) {
-    /* the list icon */
-    .nav-list {
-      display: block !important;
-    }
-  }
-  
-  /* animated the list icon */
-  #nav-toggle {
-    position: absolute;
-    left: 18px;
-    top: 22px;
-    cursor: pointer;
-    padding: 10px 35px 16px 0px;
-  }
-  
-  #nav-toggle span,
-  #nav-toggle span:before,
-  #nav-toggle span:after {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 5px;
-    width: 35px;
-    background: #ffffff;
-    position: absolute;
-    display: block;
-    content: '';
-    transition: all 300ms ease-in-out;
-  }
-  
-  #nav-toggle span:before {
-    top: -10px;
-  }
-  
-  #nav-toggle span:after {
-    bottom: -10px;
-  }
-  
-  #nav-toggle.active span {
-    background-color: transparent;
-  }
-  
-  #nav-toggle.active span:before, #nav-toggle.active span:after {
-    top: 0;
-  }
-  
-  #nav-toggle.active span:before {
-    transform: rotate(45deg);
-  }
-  
-  #nav-toggle.active span:after {
-    transform: rotate(-45deg);
-  }
+.button:hover{
+  background:#fff;
+  color:#ee6f49;
+}
+
+a:link {
+  text-decoration: none;
+}

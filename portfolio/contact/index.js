@@ -1,3 +1,6 @@
+/* modified from https://codepen.io/taniarascia/pen/dYvvYv */
+/* I edited the size, color, and some functions */
+
 (function($) { // Begin jQuery
   $(function() { // DOM ready
     // If a link has a dropdown, add sub menu toggle.
@@ -21,3 +24,4 @@
     });
   }); // end DOM ready
 })(jQuery); // end jQuery
+

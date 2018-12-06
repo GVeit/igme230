@@ -39,12 +39,6 @@ nav, aside {
 Your Formatting
 ***************/
 
-#wrapper
-{
-
-    
-}
-
 /* declare each area */
 nav { grid-area: nav; }
 header { grid-area: header; }
@@ -93,14 +87,46 @@ footer { grid-area: footer; }
 }
 
 
-ul { 
-    height: 30px;
-    width: 150px;
-    border: 1px #000 solid;
-}
-ul li { padding: 5px 10px; z-index: 2; }
-ul li:not(.init) { float: left; width: 130px; display: none; background: #ddd; }
-ul li:not(.init):hover, ul li.selected:not(.init) { background: #09f; }
-li.init { cursor: pointer; }
+/* Mobile navigation */
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #262626;
+    height: 70px;
+    width: 70px;
+  }
+  
+  @media only screen and (max-width: 1366px) {
+    .nav-mobile {
+      background-color: #292b2f;
+      display: block;
+    }
+  
+    nav {
+      width: 100%;
+      padding: 70px 0 0px;
+    }
+    nav ul {
+      display: none;
+    }
+    nav ul li {
+      float: none;
+    }
+    nav ul li a {
+      padding: 15px;
+      line-height: 20px;
+      box-shadow: none;
+    }
+    nav ul li ul li a {
+      padding-left: 30px;
+    }
+  
+    .nav-dropdown {
+      position: static;
+    }
+  }
 
-a#submit { z-index: 1; }
+
+

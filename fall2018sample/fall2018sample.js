@@ -21,3 +21,4 @@ $("ul").on("click", "li:not(.init)", function() {
     $("ul").children('.init').html($(this).html());
     allOptions.toggle();
 });
+
