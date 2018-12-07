@@ -1,3 +1,4 @@
+/* to stable the page */
 * {
     box-sizing: border-box;
 }
@@ -5,7 +6,7 @@
 /* -------------- responive designs ---------------*/
 @media screen and (max-width: 755px) {
     
-    
+    /* for the mail form */
     form {
         width: 95% !important;
         padding: 20px !important;
@@ -21,6 +22,7 @@
         display: block;
     }
 
+    /* change grid layout */
     .grid-container {
         display: grid;
         grid-template-columns: 1em auto 1em;
@@ -31,10 +33,12 @@
         '.';
       }
 
+    /* change width textboxes*/
     fieldset {
         width: auto !important;
     }
 
+    /* change the font size for text in the form */
     legend {
       font-size: 16px !important;
     }
@@ -45,6 +49,7 @@
       text-align: center;
     }
 
+    /* to center radio buttons */
     .radioButton {
       width: 35% !important;
   }
@@ -148,6 +153,7 @@ nav ul li ul li a {
   width: 70px;
 }
 
+/* responive design for nav*/
 @media only screen and (max-width: 755px) {
   .nav-mobile {
     background-color: #292b2f;
@@ -234,6 +240,8 @@ nav ul li ul li a {
 
   
 /* ------------------- wrapper -------------------*/
+
+/* with the animation background*/
 #wrapper {
   margin-right: auto; 
   margin-left:  auto; 
@@ -300,7 +308,7 @@ background-size: 400% 400%;
 }
 }
 
-/* background for the form page  */
+/* without animation background  */
 #wrapper1
 {
   margin-right: auto; 
@@ -357,6 +365,7 @@ h1 {
     font-size: 25px;
 }
 
+/* the text width in the mail form */
 fieldset {
     border: 1px solid white;
     border-radius: 1rem;
@@ -368,6 +377,7 @@ fieldset legend {
     padding: .5rem;
 }
 
+/* the mail form functions from https://www.tectite.com/formmailpage.php */
 .inputs label {
     justify-self: end;
     font-size: .9rem;
@@ -416,6 +426,7 @@ ul li {
     width: 150px;
 }
 
+/* for img */
 img {
     display: block;
     margin-left: auto;
@@ -432,7 +443,9 @@ img {
     margin-right: auto;
     
 }
-/*button style */
+
+
+/* ------------------ button style ----------------------- */
 
 button{
   background:#ee6f49;

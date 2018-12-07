@@ -159,49 +159,6 @@ html, body {margin:0;padding:0;height:100%;}
 
 /* -------------------- NAV ------------------------*/
 
-
-/* from https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_navbar */
-/* Style the top navigation bar */
-/*
-.topnav {
-    overflow: hidden;
-    background-color: #292b2f;
-    max-width: 1366px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Style the topnav links */
-/*
-.topnav a {
-    font-family: Muli;
-    font-weight: 800;
-    float: left;
-    display: block;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Change color on hover */
-/*
-.topnav a:hover {
-    background-color: rgb(82, 82, 82);
-    color: #3bbfc3;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 /* Navigation */
 
 /* modified from https://codepen.io/taniarascia/pen/dYvvYv */
@@ -395,7 +352,7 @@ h1 {
     font-family: Muli;
     color: #ffffff;
     text-align: center;
-    font-size: 56px;
+    font-size: 36px;
 }
 
 /* for the logo picture */
@@ -409,7 +366,7 @@ img {
     text-align: center;
     color: white;
     font-family: montserrat;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -519,7 +476,8 @@ which heavily modifed from https://codepen.io/gschier/pen/HCoqh?editors=1100 */
   grid-template-areas:
   'portrait portrait main main main'
   'portrait portrait experience experience experience'; 
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .grid-container > div {
   font-size: 30px;

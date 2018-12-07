@@ -14766,7 +14766,8 @@ if ($bGotNextForm) {
 			if ($bGotGoodTemplate) {
 				OutputTemplate($SPECIAL_VALUES["good_template"],$aRawDataValues);
 			} else {
-				CreatePage(GetMessage(MSG_THANKS_PAGE),GetMessage(MSG_FORM_OK));
+				//type where you scucess page is online, header location is a redirect which means when its ok you got it
+				header('Location: https://people.rit.edu/gkv8601/contact/success.html ');
 			}
 		}
 		//
