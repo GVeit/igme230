@@ -2,12 +2,6 @@
 /* -------------- responive designs ---------------*/
 @media screen and (max-width: 755px) {
 
-    /* from https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_navbar */
-    .topnav a {
-      float: none;
-      width: 100%;
-    }
-
     /* change index page's wrapper to 100% in height */
     #wrapper{
         height: 100% !important;

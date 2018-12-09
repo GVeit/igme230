@@ -28,19 +28,19 @@
         <div class="navigation">
                 <div class="nav-container">
                   <nav>
-                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!" aria-label="navMobile"><span></span></a></div>
                     <ul class="nav-list">
                       <li>
-                        <a href="https://gveit.github.io/igme230/portfolio">HOME</a>
+                        <a href="https://gveit.github.io/igme230/portfolio" aria-label="home">HOME</a>
                       </li>
                       <li>
-                        <a href="https://gveit.github.io/igme230/portfolio/bio.html">ABOUT</a>
+                        <a href="https://gveit.github.io/igme230/portfolio/bio.html" aria-label="bio">ABOUT</a>
                       </li>
                       <li>
-                        <a href="https://gveit.github.io/igme230/portfolio/gallery.html">PORTFOLIO</a>
+                        <a href="https://gveit.github.io/igme230/portfolio/gallery.html" aria-label="portfolio">PORTFOLIO</a>
                       </li>
                       <li>
-                        <a href="form.html">CONTACT</a>
+                        <a href="form.html" aria-label="contact">CONTACT</a>
                       </li>
                     </ul>
                   </nav>
@@ -63,29 +63,29 @@
             <legend>Contact Information</legend>
 
             <div class="inputs">
-                <label id="fullname">Your Full Name:</label>
-                <input type="text" name="FullName" size="30">
+                <label for="name" id="fullname" aria-label="FullName">Your Full Name:</label>
+                <input type="text" name="FullName" aria-label="FullName" size="30">
             </div>
 
             <div class="inputs">
-                <label id="useremail">Your Email:</label>
-                <input type="email" name="EmailAddr" pattern=".+rit.edu" size="30">
+                <label id="useremail" aria-label="EmailAddr">Your Email:</label>
+                <input type="email" name="EmailAddr" pattern=".+rit.edu" aria-label="EmailAddr" size="30">
             </div>
 
         </fieldset>
 
         <div id="commentsection">
-            <label id="comments">Comments:</label>
-        <textarea name="mesg"></textarea>
+            <label id="comments" aria-label="Comments">Comments:</label>
+        <textarea name="mesg" aria-label="Comments"></textarea>
         </div>
 
         <div class="responseSize">
-        <label id="response">Would You Like a Response?</label>
+        <label id="response" aria-label="Response">Would You Like a Response?</label>
         </div>
 
         <div class="radioButton">
-            <input type="radio" name="response" value="yes">Yes
-            <input type="radio" name="response" value="no">No
+            <input type="radio" name="response" aria-label="YESResponse" value="yes">Yes
+            <input type="radio" name="response" aria-label="NOResponse" value="no">No
         </div>
 
         <button type="submit">SEND</button>
