@@ -1,0 +1,140 @@
+/*****************
+General Formatting
+******************/
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+html {
+    /* sets base font size for rem sizing */
+    font-size: 16px;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+section, header, footer {
+    padding: .5rem;
+}
+
+.menu {
+    width: 100%;
+    padding: .5rem;
+    background-color: #aaa;
+    margin: 1px;
+}
+
+.submenu {
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    background-color: #eee;
+    padding-left: .5rem;
+}
+
+/**************
+Your Formatting
+***************/
+
+@media only screen and (max-width: 600px) {
+
+    #pagegrid {
+        margin-right: none !important; 
+        margin-left: none !important;
+    
+        display: grid;
+        grid-template-columns: none !important;
+        grid-template-rows: 80px auto auto auto auto 30px !important;
+
+        min-width: 100vw !important;
+        grid-template-areas:
+        'header'
+        'story'
+        'source'
+        'extracredit'
+        'nav'
+        'footer' !important;
+        
+    }
+
+}
+
+/*--------- GRID ----------*/
+
+/* declare each area */
+nav { grid-area: nav; }
+header { grid-area: header; }
+#story { grid-area: story; }
+#source { grid-area: source; }
+#extracredit { grid-area: extracredit; }
+footer { grid-area: footer; }
+
+#pagegrid {
+    
+    margin-right: auto; 
+    margin-left:  auto;
+    max-width: 1100px;
+
+    display: grid;
+    grid-template-columns: 200px 2fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 30px;
+    grid-template-areas:
+    'header header header'
+    'nav story source'
+    'nav story extracredit'
+    'footer footer footer';
+
+    min-height: 100vh;
+    min-width: 95vw;
+}
+
+/* nav */
+nav {
+    background-color: lavenderblush;
+}
+
+nav ul {text-align:center;}
+nav ul li:hover {background: lightpink; color: magenta; cursor: pointer;}
+nav ul li a {display:block;padding:15px 25px;color:#444;}
+nav ul li ul {position:absolute;width:110px;background:#FFF;}
+nav ul li ul li {width:110px;}
+nav ul li ul li a {display:block;padding:15px 10px;color:#444;}
+nav ul li ul li:hover a {background:#F7F7F7;}
+nav ul li ul.fallback {display:none;}
+nav ul li:hover ul.fallback {display:block;}
+
+/* header */
+header {
+    background-color: lightblue;
+    text-align: center;
+    line-height: 30px; /* Center Vertically */
+}
+/* story */
+#story {
+    background-color: lightcyan;
+}
+/* source */
+#source {
+    background-color: lightsalmon;
+}
+/* extracredit */
+#extracredit {
+    background-color: white;
+    text-align: center;
+}
+/* footer */
+footer{
+    background-color: lightblue;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    line-height: 0px;
+}
